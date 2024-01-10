@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -69,6 +69,18 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    -- Enable these for a transparent background.
+    -- vim.cmd( "hi Normal guibg=NONE ctermbg=NONE")
+    -- vim.cmd( "hi CursorColumn guibg=NONE ctermbg=NONE")
+    -- vim.cmd( "hi CursorLine guibg=NONE ctermbg=NONE")
+    -- vim.cmd( "hi CursorLineNr guibg=NONE ctermbg=NONE")
+    -- vim.cmd( "hi clear LineNr")
+    -- vim.cmd( "hi clear SignColumn")
+    -- vim.cmd( "hi clear StatusLine")
+    vim.opt.tabstop = 4
+    vim.opt.shiftwidth = 4
+    vim.opt.expandtab = true
+    vim.opt.conceallevel = 2
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
